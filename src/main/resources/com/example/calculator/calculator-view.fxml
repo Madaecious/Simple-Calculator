@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="415.0" prefWidth="247.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculator.CalculatorController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="16.0" layoutY="15.0" prefHeight="107.0" prefWidth="214.0">
+         <children>
+            <Separator prefWidth="200.0" />
+            <Label fx:id="lblFirstNumber" alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" textAlignment="RIGHT">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <HBox prefHeight="27.0" prefWidth="214.0">
+               <children>
+                  <Label fx:id="lblOperation" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="27.0" prefWidth="20.0">
+                     <padding>
+                        <Insets bottom="3.0" />
+                     </padding>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSecondNumber" alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" prefHeight="27.0" prefWidth="200.0" textAlignment="RIGHT">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <TextField fx:id="txtfldDisplay" alignment="CENTER_RIGHT" onKeyTyped="#keyboardPress" prefHeight="30.0" prefWidth="214.0">
+               <VBox.margin>
+                  <Insets top="6.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+         </children>
+      </VBox>
+      <Pane layoutX="16.0" layoutY="135.0" prefHeight="201.0" prefWidth="151.0">
+         <children>
+            <Button fx:id="bttnTwo" layoutX="50.0" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressTwo" prefHeight="50.0" prefWidth="50.0" text="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bttnOne" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressOne" prefHeight="50.0" prefWidth="50.0" text="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bttnThree" layoutX="100.0" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressThree" prefHeight="50.0" prefWidth="50.0" text="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bttnFive" layoutX="50.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressFive" prefHeight="50.0" prefWidth="50.0" text="5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bttnFour" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressFour" prefHeight="50.0" prefWidth="50.0" text="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bttnSix" layoutX="100.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressSix" prefHeight="50.0" prefWidth="50.0" text="6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bttnEight" layoutX="50.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressEight" prefHeight="50.0" prefWidth="50.0" text="8">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bttnSeven" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressSeven" prefHeight="50.0" prefWidth="50.0" text="7">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bttnNine" layoutX="100.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressNine" prefHeight="50.0" prefWidth="50.0" text="9">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bttnZero" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressZero" prefHeight="50.0" prefWidth="100.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bttnDecimalPoint" layoutX="100.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressDecimalPoint" prefHeight="50.0" prefWidth="50.0" text=".">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="180.0" layoutY="135.0" prefHeight="201.0" prefWidth="50.0">
+         <children>
+            <Button fx:id="bttnMultiply" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressMultiply" prefHeight="50.0" prefWidth="50.0" text="*">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bttnSubtract" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressSubtract" prefHeight="50.0" prefWidth="50.0" text="-">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bttnAdd" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressAdd" prefHeight="50.0" prefWidth="50.0" text="+">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bttnDivide" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressDivide" prefHeight="50.0" prefWidth="50.0" text="/" />
+         </children>
+      </Pane>
+      <HBox layoutX="16.0" layoutY="351.0" prefHeight="50.0" prefWidth="214.0">
+         <children>
+            <Button fx:id="bttnClear" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressClear" prefHeight="50.0" prefWidth="149.0" text="Clear" />
+            <Button fx:id="bttnCalculate" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#pressCalculate" prefHeight="50.0" prefWidth="50.0" text="=">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
