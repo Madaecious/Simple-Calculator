@@ -1,3 +1,10 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Name:			Mark Barros
+//	Course:			CS4800 - Software Engineering
+//	Description:	This project is of a simple calculator. The GUI was created using the JavaFX
+//                  framework and SceneBuilder.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 package com.example.calculator;
 
 // These are imports. ---------------------------------------------------------------------------------------

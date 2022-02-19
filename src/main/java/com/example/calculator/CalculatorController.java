@@ -1,3 +1,10 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Name:			Mark Barros
+//	Course:			CS4800 - Software Engineering
+//	Description:	This project is of a simple calculator. The GUI was created using the JavaFX
+//                  framework and SceneBuilder.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 package com.example.calculator;
 
 // These are imports. ---------------------------------------------------------------------------------------
@@ -149,8 +156,7 @@ public class CalculatorController {
     // This ensures that an operator is ready to be selected. -----------------------------------------------
     public boolean NotReadyForOperation() {
         if (operationPerformed) return true;
-        if (txtfldDisplay.getText().equals(BLANK)) return true;
-        return false;
+        return txtfldDisplay.getText().equals(BLANK);
     }
 
     // This handles the clear button press. -----------------------------------------------------------------
@@ -171,18 +177,10 @@ public class CalculatorController {
         secondOperandSet = true;
 
         switch (operationToPerform) {
-            case "add":
-                result = firstOperand + secondOperand;
-                break;
-            case "subtract":
-                result = firstOperand - secondOperand;
-                break;
-            case "multiply":
-                result = firstOperand * secondOperand;
-                break;
-            case "divide":
-                result = firstOperand / secondOperand;
-                break;
+            case "add" -> result = firstOperand + secondOperand;
+            case "subtract" -> result = firstOperand - secondOperand;
+            case "multiply" -> result = firstOperand * secondOperand;
+            case "divide" -> result = firstOperand / secondOperand;
         }
 
         txtfldDisplay.setText(String.valueOf(result));
@@ -223,8 +221,7 @@ public class CalculatorController {
 
     // This ensures the length of the operands are less than eight digits. ----------------------------------
     public boolean maxLengthReached(String operand) {
-        if (operand.length() >= 8) return true;
-        return false;
+        return operand.length() >= 8;
     }
 
 } // End of CalculatorController class. ---------------------------------------------------------------------
